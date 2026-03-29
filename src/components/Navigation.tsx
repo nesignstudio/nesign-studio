@@ -66,7 +66,7 @@ export function Navigation({ onStartProject }: NavigationProps) {
             >
               <div className="flex items-center gap-3">
                 <img
-                  src="/logo.png"
+                  src="./logo.png"
                   alt="Nesign Studio"
                   className="h-14 w-auto logo-neon-glow transition-all duration-300 group-hover:scale-105"
                   style={{ filter: 'drop-shadow(0 0 15px rgba(var(--color-accent-rgb), 0.6)) drop-shadow(0 0 40px rgba(var(--color-accent-rgb), 0.3))' }}

@@ -42,7 +42,7 @@ export function BackgroundMusic({ hasEntered }: BackgroundMusicProps) {
         <>
             <audio
                 ref={audioRef}
-                src="/audio/running-arpeggio.mp3"
+                src="./audio/running-arpeggio.mp3"
                 loop
                 preload="auto"
             />

@@ -61,12 +61,12 @@ export function Work({ onStartProject, onSeeMoreBehance }: WorkProps) {
   };
 
   const projectsData = [
-    { id: 1, color: 'var(--color-accent)', image: '/projects/nesign-studio.png', year: '2024', link: 'https://www.behance.net/gallery/241391103/Nesign-Studio' },
-    { id: 2, color: 'var(--color-accent)', image: '/projects/neet-black.jpg', year: '2023', link: 'https://www.behance.net/neezaryatuun' },
-    { id: 3, color: 'var(--color-accent)', image: '/projects/trobax-new.jpg', year: '2024', link: 'https://www.behance.net/gallery/236504011/TRX-FIX' },
-    { id: 4, color: 'var(--color-accent)', image: '/projects/ld-export-new.jpg', year: '2023', link: 'https://www.behance.net/gallery/189332431/LD-EXPORT' },
-    { id: 5, color: 'var(--color-accent)', image: '/projects/runs-black.jpg', year: '2022', link: 'https://www.behance.net/gallery/187420689/Runz-(Brand-Identity)' },
-    { id: 6, color: 'var(--color-accent)', image: '/projects/towards-the-future-new.jpg', year: '2024', link: 'https://www.behance.net/neezaryatuun' }
+    { id: 1, color: 'var(--color-accent)', image: './projects/nesign-studio.png', year: '2024', link: 'https://www.behance.net/gallery/241391103/Nesign-Studio' },
+    { id: 2, color: 'var(--color-accent)', image: './projects/neet-black.jpg', year: '2023', link: 'https://www.behance.net/neezaryatuun' },
+    { id: 3, color: 'var(--color-accent)', image: './projects/trobax-new.jpg', year: '2024', link: 'https://www.behance.net/gallery/236504011/TRX-FIX' },
+    { id: 4, color: 'var(--color-accent)', image: './projects/ld-export-new.jpg', year: '2023', link: 'https://www.behance.net/gallery/189332431/LD-EXPORT' },
+    { id: 5, color: 'var(--color-accent)', image: './projects/runs-black.jpg', year: '2022', link: 'https://www.behance.net/gallery/187420689/Runz-(Brand-Identity)' },
+    { id: 6, color: 'var(--color-accent)', image: './projects/towards-the-future-new.jpg', year: '2024', link: 'https://www.behance.net/neezaryatuun' }
   ];
 
   const translatedItems = t('work.items') as any[];

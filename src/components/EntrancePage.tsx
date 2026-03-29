@@ -108,7 +108,7 @@ export function EntrancePage({ onEnter }: EntrancePageProps) {
                             transition={{ duration: 0.8, delay: 0.4 }}
                         >
                             <img
-                                src="/entrance-logo.png"
+                                src="./entrance-logo.png"
                                 alt="Logo"
                                 className="h-8 md:h-10 w-auto object-contain brightness-125"
                                 style={{ filter: 'drop-shadow(0 0 12px rgba(var(--color-accent-rgb), 0.4))' }}
@@ -148,7 +148,7 @@ export function EntrancePage({ onEnter }: EntrancePageProps) {
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
                         <img
-                            src="/towards-the-future.png"
+                            src="./towards-the-future.png"
                             alt="TOWARDS THE FUTURE"
                             className="h-auto w-full max-w-[320px] object-contain brightness-110"
                         />

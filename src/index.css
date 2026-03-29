@@ -56,6 +56,22 @@ html {
   scroll-behavior: auto;
 }
 
+
+
+@layer base {
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
 html.lenis,
 html.lenis body {
   height: auto;

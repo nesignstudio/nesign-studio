@@ -181,7 +181,7 @@ export function Hero({ onStartProject }: HeroProps) {
             >
               {/* Primary White Logo */}
               <img
-                src="/hero-logo.png"
+                src="./hero-logo.png"
                 alt="NESIGN STUDIO"
                 className="hero-line w-full h-auto object-contain"
               />
@@ -189,18 +189,18 @@ export function Hero({ onStartProject }: HeroProps) {
               {/* Data Pulse Flow Overlay */}
               <div className="data-pulse-overlay">
                 <img
-                  src="/hero-logo.png"
+                  src="./hero-logo.png"
                   alt=""
                   className="w-full h-auto object-contain pulse-base"
                 />
                 <div className="pulse-chromatic-wrap">
                   <img
-                    src="/hero-logo.png"
+                    src="./hero-logo.png"
                     alt=""
                     className="w-full h-auto object-contain pulse-chroma-red"
                   />
                   <img
-                    src="/hero-logo.png"
+                    src="./hero-logo.png"
                     alt=""
                     className="w-full h-auto object-contain pulse-chroma-cyan"
                   />

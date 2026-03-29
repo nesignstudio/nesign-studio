@@ -1,0 +1,95 @@
+﻿                                    style={{
+                                    style={{
+                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.95)', backdropFilter: 'blur(8px)' }}
+                                    style={{ background: 'rgba(var(--color-accent-rgb), 0.1)', border: '1px solid rgba(var(--color-accent-rgb), 0.3)' }}
+            style={{ left: x, top: y }}
+                    style={{
+                    style={{ backgroundColor: color, boxShadow: `0 0 4px ${color}` }}
+        style={{ opacity: 1 }}
+        style={{ opacity: 1 }}
+                    style={{ x: translateX, y: translateY }}
+                                style={{ filter: 'drop-shadow(0 0 12px rgba(var(--color-accent-rgb), 0.4))' }}
+                            style={{
+                                style={{ backgroundColor: 'rgba(var(--color-accent-rgb), 0.2)' }} />
+                        style={{ textAlignLast: 'justify' }}
+            style={{
+            <div className="absolute top-0 left-0 w-4 h-4 border-l border-t m-2" style={{ borderColor: 'rgba(var(--color-accent-rgb), 0.3)' }} />
+            <div className="absolute top-0 right-0 w-4 h-4 border-r border-t m-2" style={{ borderColor: 'rgba(var(--color-accent-rgb), 0.3)' }} />
+            <div className="absolute bottom-0 left-0 w-4 h-4 border-l border-b m-2" style={{ borderColor: 'rgba(var(--color-accent-rgb), 0.3)' }} />
+            <div className="absolute bottom-0 right-0 w-4 h-4 border-r border-b m-2" style={{ borderColor: 'rgba(var(--color-accent-rgb), 0.3)' }} />
+                        style={{
+                            style={{ boxShadow: '0 0 15px rgba(var(--color-accent-rgb), 1)' }}
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                  style={{ filter: 'drop-shadow(0 0 15px rgba(var(--color-accent-rgb), 0.6)) drop-shadow(0 0 40px rgba(var(--color-accent-rgb), 0.3))' }}
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-[var(--color-accent)] transition-all duration-300 group-hover:w-full" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+                  style={{ boxShadow: '0 0 4px rgba(var(--color-accent-rgb), 0.5)' }}
+                  style={{ boxShadow: '0 0 4px rgba(var(--color-accent-rgb), 0.5)' }}
+                            style={{
+                                    style={{ borderRadius: '8px' }}
+                        style={{
+                                    style={{
+              <span className="w-8 h-px bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+                style={{ textShadow: '0 0 10px rgba(var(--color-accent-rgb), 0.3)' }}>
+                style={{ textShadow: '0 0 10px rgba(var(--color-accent-rgb), 0.3)' }}>
+                style={{ textShadow: '0 0 10px rgba(var(--color-accent-rgb), 0.3)' }}>
+                style={{ textShadow: '0 0 10px rgba(var(--color-accent-rgb), 0.3)' }}>
+                    style={{ filter: 'drop-shadow(0 0 10px rgba(var(--color-accent-rgb), 0.3))' }}
+                <p className="text-[#8888AA] text-sm leading-relaxed mb-6 max-w-sm text-justify" style={{ textAlignLast: isRTL ? 'right' : 'left' }}>
+                  style={{ textShadow: '0 0 10px rgba(var(--color-accent-rgb), 0.2)' }}
+              style={{
+                <span className="w-4 md:w-8 h-px bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+              style={{ textAlignLast: isRTL ? 'right' : 'left' }}
+              style={{ textAlignLast: isRTL ? 'right' : 'left' }}
+                  style={{
+          style={{ boxShadow: '0 0 6px rgba(var(--color-accent-rgb), 0.4)' }}
+              <span className="w-8 h-px bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+              style={{ textAlignLast: isRTL ? 'right' : 'left' }}
+                style={{ textShadow: '0 0 15px rgba(var(--color-accent-rgb), 0.3)' }}>
+                style={{ textAlignLast: isRTL ? 'right' : 'left' }}
+                style={{ textShadow: '0 0 15px rgba(var(--color-accent-rgb), 0.3)' }}>
+                style={{ textAlignLast: isRTL ? 'right' : 'left' }}
+              <span className="w-8 h-px bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+                      <p key={idx} className={`${idx === 0 ? 'text-white/90 text-lg md:text-xl' : 'text-[#8888AA] text-sm md:text-base'} leading-relaxed font-display ${idx === 0 ? 'font-light' : ''} mb-6 text-justify`} style={{ textAlignLast: isRTL ? 'right' : 'left' }}>
+                            style={{
+                                <span className="text-xs font-mono" style={{ color }}>
+                              <p className="text-[#8888AA] text-sm leading-relaxed text-justify" style={{ textAlignLast: isRTL ? 'right' : 'left' }}>
+                              style={{ backgroundColor: color, opacity: 0.3 }} />
+                      <p key={idx} className={`${idx === 0 ? 'text-white/90 text-lg md:text-xl' : 'text-[#8888AA] text-sm md:text-base'} leading-relaxed font-display ${idx === 0 ? 'font-light' : ''} mb-6 text-justify`} style={{ textAlignLast: isRTL ? 'right' : 'left' }}>
+                            style={{
+                              <span className="text-xs font-mono" style={{ color }}>
+                            <p className="text-[#8888AA] text-sm leading-relaxed text-justify" style={{ textAlignLast: isRTL ? 'right' : 'left' }}>
+                              style={{ backgroundColor: color, opacity: 0.3 }} />
+                        style={{ WebkitTextStroke: activeTab === 'brand-identity' ? '1px rgba(var(--color-accent-rgb), 0.15)' : '1px rgba(var(--color-accent-rgb), 0.15)' }}
+                        style={{
+                          style={{ boxShadow: '0 0 10px rgba(var(--color-accent-rgb), 0.3)' }}
+                          style={{ boxShadow: '0 0 10px rgba(var(--color-accent-rgb), 0.3)' }}
+                <span className="w-8 h-px bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+                    <span className="w-2 h-2 bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+                            style={{ backgroundColor: scope.color, boxShadow: `0 0 15px rgba(var(--color-accent-rgb), 0.5)` }}
+                                <span className="w-1 h-1 mt-1.5 flex-shrink-0 rounded-full" style={{ backgroundColor: scope.color, boxShadow: `0 0 4px rgba(var(--color-accent-rgb), 0.4)` }} />
+                              style={{ backgroundColor: scope.color, boxShadow: `0 0 8px rgba(var(--color-accent-rgb), 0.4)` }}
+                                      <span className="w-1 h-1 flex-shrink-0" style={{ backgroundColor: scope.color }} />
+                    <span className="w-2 h-2 bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+                            style={{ backgroundColor: pkg.color, boxShadow: `0 0 15px rgba(var(--color-accent-rgb), 0.5)` }}
+                                style={{ backgroundColor: `rgba(var(--color-accent-rgb), 0.08)`, color: pkg.color, border: `1px solid rgba(var(--color-accent-rgb), 0.2)` }}
+                              <span className="text-white text-xs md:text-sm font-mono" style={{ color: pkg.color }}>{pkg.timeline} {isRTL ? t('services.daysRef') : t('services.days')}</span>
+                            style={{
+                    <span className="w-2 h-2 bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+                          <p className="text-[#8888AA] text-[11px] md:text-sm mb-1.5 md:mb-4 leading-[1.45] md:leading-relaxed flex-1 max-w-[90%] text-justify" style={{ textAlignLast: isRTL ? 'right' : 'left' }}>{stage.description}</p>
+                    <span className="w-2 h-2 bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+                            <span className="text-xs font-mono" style={{ color: pkg.color }}>{pkg.timeline} {t('services.days')}</span>
+                                <span className="w-1.5 h-1.5 mt-1.5 flex-shrink-0" style={{ backgroundColor: pkg.color, boxShadow: `0 0 4px ${pkg.color}66` }} />
+                    <span className="w-2 h-2 bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+                            <span className="text-xs font-mono" style={{ color: pkg.color }}>{pkg.timeline} {t('services.days')}</span>
+                                <span className="w-1.5 h-1.5 mt-1.5 flex-shrink-0" style={{ backgroundColor: pkg.color, boxShadow: `0 0 4px ${pkg.color}66` }} />
+                    <span className="w-2 h-2 bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+                <span className="w-8 h-px bg-[var(--color-accent)]" style={{ boxShadow: '0 0 8px rgba(var(--color-accent-rgb), 0.5)' }} />
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                      style={{ backgroundColor: project.color }}
+                      style={{
+                        style={{ color: hoveredProject === project.id ? project.color : '#ffffff' }}
+                    <p className={`text-[#555577] text-sm leading-relaxed text-justify ${isRTL ? 'pl-4' : 'pr-4'}`} style={{ textAlignLast: isRTL ? 'right' : 'left' }}>
+                    style={{
+                        style={{ width: `${scrollProgress}%` }}
+                            <span className="text-xs uppercase tracking-[0.2em] font-display font-bold" style={{ color: project.color }}>
+                          <p className="text-[#8888AA] text-lg leading-relaxed font-display text-justify" style={{ textAlignLast: isRTL ? 'right' : 'left' }}>{project.description}</p>

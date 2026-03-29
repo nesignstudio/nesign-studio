@@ -17,7 +17,7 @@ export function ThemeSwitcher() {
         setAccentColor(THEME_COLORS[nextIndex].color);
 
         // Sound effect
-        const audio = new Audio('/audio/soundreality-ui-pop-up-clear-391155.mp3');
+        const audio = new Audio('./audio/soundreality-ui-pop-up-clear-391155.mp3');
         audio.volume = 0.5;
         audio.play().catch(e => console.log('Audio play error:', e));
     };
@@ -60,7 +60,7 @@ export function ThemeSwitcher() {
                                 key={theme.name}
                                 onClick={() => {
                                     setAccentColor(theme.color);
-                                    const audio = new Audio('/audio/soundreality-ui-pop-up-clear-391155.mp3');
+                                    const audio = new Audio('./audio/soundreality-ui-pop-up-clear-391155.mp3');
                                     audio.volume = 0.5;
                                     audio.play().catch(e => console.log('Audio play error:', e));
                                 }}

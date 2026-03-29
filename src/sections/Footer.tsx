@@ -44,7 +44,7 @@ export function Footer() {
               >
                 <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className={isRTL ? 'inline-block' : ''}>
                   <img
-                    src="/logo.png"
+                    src="./logo.png"
                     alt="Nesign Studio"
                     className="h-16 w-auto mb-6"
                     style={{ filter: 'drop-shadow(0 0 10px rgba(var(--color-accent-rgb), 0.3))' }}
