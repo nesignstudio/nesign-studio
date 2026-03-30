@@ -329,7 +329,12 @@ const translations: any = {
                 brief: 'Project Brief',
                 submit: 'Send Inquiry'
             },
-            waTemplate: 'Hi, I’d like to start a branding project. Here are some details about my business:'
+            waTemplate: 'Hi, I’d like to start a branding project. Here are some details about my business:',
+            status: {
+                sending: 'Sending Inquiry...',
+                success: 'Inquiry Sent Successfully!',
+                error: 'An error occurred. Please try again.'
+            }
         }
     },
     ar: {
@@ -600,7 +605,12 @@ const translations: any = {
                 brief: 'نبذة عن المشروع',
                 submit: 'إرسال الاستفسار'
             },
-            waTemplate: 'مرحباً، أود البدء في مشروع هوية بصرية. إليك بعض التفاصيل عن عملي:'
+            waTemplate: 'مرحباً، أود البدء في مشروع هوية بصرية. إليك بعض التفاصيل عن عملي:',
+            status: {
+                sending: 'جاري إرسال الاستفسار...',
+                success: 'تم إرسال الاستفسار بنجاح!',
+                error: 'حدث خطأ ما. يرجى المحاولة مرة أخرى.'
+            }
         }
     }
 };

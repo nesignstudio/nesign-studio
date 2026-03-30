@@ -21,7 +21,7 @@ export function ClickEffect() {
 
             if (isClickable && !isThemeColorSwitcher) {
                 // Play global sound effect for buttons/links
-                const audio = new Audio('/audio/rescopicsound-ui-click-menu-modern-interface-select-small-01-230473.mp3');
+                const audio = new Audio('./audio/rescopicsound-ui-click-menu-modern-interface-select-small-01-230473.mp3');
                 audio.volume = 0.4; // Adjust volume as needed
                 audio.play().catch(e => console.log('Audio play error:', e));
             }

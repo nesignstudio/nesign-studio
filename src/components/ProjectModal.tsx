@@ -15,24 +15,56 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
     const [email, setEmail] = useState('');
     const [brief, setBrief] = useState('');
 
+    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
     const whatsappLink = "https://wa.me/212708781607?text=" + encodeURIComponent(t('modal.waTemplate'));
 
-    const handleEmailSubmit = (e: React.FormEvent) => {
+    // Web3Forms Access Key - You should replace this with your own from web3forms.com
+    const ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"; 
+
+    const handleEmailSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!name || !brief) return;
 
-        const subject = encodeURIComponent(`New Project Inquiry from ${name}`);
-        const bodyText = `Name: ${name}\nEmail: ${email}\n\nProject Brief:\n${brief}\n\n---\nSent via Nesign Studio Website`;
-        const body = encodeURIComponent(bodyText);
+        setStatus('submitting');
 
-        window.location.href = `mailto:nesignstudio.contact@gmail.com?subject=${subject}&body=${body}`;
+        try {
+            const formData = new FormData();
+            formData.append("access_key", ACCESS_KEY);
+            formData.append("name", name);
+            formData.append("email", email);
+            formData.append("message", brief);
+            formData.append("subject", `New Project Inquiry from ${name}`);
+            formData.append("from_name", "Nesign Studio Website");
 
-        // Reset and close
-        setName('');
-        setEmail('');
-        setBrief('');
-        setIsFormExpanded(false);
-        onClose();
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setStatus('success');
+                // Reset form fields
+                setName('');
+                setEmail('');
+                setBrief('');
+                
+                // Close modal after a delay
+                setTimeout(() => {
+                    setStatus('idle');
+                    setIsFormExpanded(false);
+                    onClose();
+                }, 3000);
+            } else {
+                setStatus('error');
+                console.error("Submission failed:", data);
+            }
+        } catch (error) {
+            setStatus('error');
+            console.error("Network error:", error);
+        }
     };
 
     if (typeof document === 'undefined') return null; // Safe guard for portals just in case
@@ -147,38 +179,64 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                                                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                                                 className="overflow-hidden mt-6"
                                             >
-                                                <form className="space-y-3" onSubmit={handleEmailSubmit}>
-                                                    <input
-                                                        type="text"
-                                                        value={name}
-                                                        onChange={(e) => setName(e.target.value)}
-                                                        placeholder={t('modal.form.name')}
-                                                        required
-                                                        className={`w-full bg-[#050510]/50 border border-[#1A1A3A] rounded-[8px] px-4 py-3 text-sm text-white focus:border-[var(--color-accent)]/50 outline-none transition-all placeholder:text-[#333355] ${isRTL ? 'text-right' : 'text-left'}`}
-                                                    />
-                                                    <input
-                                                        type="email"
-                                                        value={email}
-                                                        onChange={(e) => setEmail(e.target.value)}
-                                                        placeholder={t('modal.form.email')}
-                                                        required
-                                                        className={`w-full bg-[#050510]/50 border border-[#1A1A3A] rounded-[8px] px-4 py-3 text-sm text-white focus:border-[var(--color-accent)]/50 outline-none transition-all placeholder:text-[#333355] ${isRTL ? 'text-right' : 'text-left'}`}
-                                                    />
-                                                    <textarea
-                                                        value={brief}
-                                                        onChange={(e) => setBrief(e.target.value)}
-                                                        placeholder={t('modal.form.brief')}
-                                                        required
-                                                        rows={3}
-                                                        className={`w-full bg-[#050510]/50 border border-[#1A1A3A] rounded-[8px] px-4 py-3 text-sm text-white focus:border-[var(--color-accent)]/50 outline-none transition-all placeholder:text-[#333355] resize-none ${isRTL ? 'text-right' : 'text-left'}`}
-                                                    />
-                                                    <button
-                                                        type="submit"
-                                                        className="w-full py-3 bg-[#1A1A3A] text-white text-xs uppercase tracking-widest font-bold hover:bg-[#2A2A5A] transition-all duration-300 rounded-[8px]"
+                                                {status === 'success' ? (
+                                                    <motion.div 
+                                                        initial={{ opacity: 0, y: 10 }}
+                                                        animate={{ opacity: 1, y: 0 }}
+                                                        className="py-6 text-[var(--color-accent)] text-sm font-display"
                                                     >
-                                                        {t('modal.form.submit')}
-                                                    </button>
-                                                </form>
+                                                        {t('modal.status.success')}
+                                                    </motion.div>
+                                                ) : (
+                                                    <form className="space-y-3" onSubmit={handleEmailSubmit}>
+                                                        <input
+                                                            type="text"
+                                                            value={name}
+                                                            onChange={(e) => setName(e.target.value)}
+                                                            placeholder={t('modal.form.name')}
+                                                            required
+                                                            disabled={status === 'submitting'}
+                                                            className={`w-full bg-[#050510]/50 border border-[#1A1A3A] rounded-[8px] px-4 py-3 text-sm text-white focus:border-[var(--color-accent)]/50 outline-none transition-all placeholder:text-[#333355] ${isRTL ? 'text-right' : 'text-left'} ${status === 'submitting' ? 'opacity-50' : ''}`}
+                                                        />
+                                                        <input
+                                                            type="email"
+                                                            value={email}
+                                                            onChange={(e) => setEmail(e.target.value)}
+                                                            placeholder={t('modal.form.email')}
+                                                            required
+                                                            disabled={status === 'submitting'}
+                                                            className={`w-full bg-[#050510]/50 border border-[#1A1A3A] rounded-[8px] px-4 py-3 text-sm text-white focus:border-[var(--color-accent)]/50 outline-none transition-all placeholder:text-[#333355] ${isRTL ? 'text-right' : 'text-left'} ${status === 'submitting' ? 'opacity-50' : ''}`}
+                                                        />
+                                                        <textarea
+                                                            value={brief}
+                                                            onChange={(e) => setBrief(e.target.value)}
+                                                            placeholder={t('modal.form.brief')}
+                                                            required
+                                                            rows={3}
+                                                            disabled={status === 'submitting'}
+                                                            className={`w-full bg-[#050510]/50 border border-[#1A1A3A] rounded-[8px] px-4 py-3 text-sm text-white focus:border-[var(--color-accent)]/50 outline-none transition-all placeholder:text-[#333355] resize-none ${isRTL ? 'text-right' : 'text-left'} ${status === 'submitting' ? 'opacity-50' : ''}`}
+                                                        />
+                                                        {status === 'error' && (
+                                                            <p className="text-red-400 text-[10px] uppercase tracking-tighter">
+                                                                {t('modal.status.error')}
+                                                            </p>
+                                                        )}
+                                                        <button
+                                                            type="submit"
+                                                            disabled={status === 'submitting'}
+                                                            className={`group relative w-full py-3 bg-[#1A1A3A] text-white text-xs uppercase tracking-widest font-bold hover:bg-[#2A2A5A] transition-all duration-300 rounded-[8px] overflow-hidden ${status === 'submitting' ? 'cursor-not-allowed opacity-70' : ''}`}
+                                                        >
+                                                            <span className={status === 'submitting' ? 'opacity-0' : 'opacity-100'}>
+                                                                {t('modal.form.submit')}
+                                                            </span>
+                                                            {status === 'submitting' && (
+                                                                <div className="absolute inset-0 flex items-center justify-center">
+                                                                    <div className="w-4 h-4 border-2 border-[var(--color-accent)] border-t-transparent rounded-full animate-spin" />
+                                                                </div>
+                                                            )}
+                                                        </button>
+                                                    </form>
+                                                )}
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
