@@ -20,7 +20,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
     const whatsappLink = "https://wa.me/212708781607?text=" + encodeURIComponent(t('modal.waTemplate'));
 
     // Web3Forms Access Key - You should replace this with your own from web3forms.com
-    const ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"; 
+    const ACCESS_KEY = "a77d19ea-ef08-43dc-a1fe-0ccb061c78d3";
 
     const handleEmailSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -50,7 +50,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                 setName('');
                 setEmail('');
                 setBrief('');
-                
+
                 // Close modal after a delay
                 setTimeout(() => {
                     setStatus('idle');
@@ -180,7 +180,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                                                 className="overflow-hidden mt-6"
                                             >
                                                 {status === 'success' ? (
-                                                    <motion.div 
+                                                    <motion.div
                                                         initial={{ opacity: 0, y: 10 }}
                                                         animate={{ opacity: 1, y: 0 }}
                                                         className="py-6 text-[var(--color-accent)] text-sm font-display"
@@ -191,6 +191,8 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                                                     <form className="space-y-3" onSubmit={handleEmailSubmit}>
                                                         <input
                                                             type="text"
+                                                            id="name"
+                                                            name="name"
                                                             value={name}
                                                             onChange={(e) => setName(e.target.value)}
                                                             placeholder={t('modal.form.name')}
@@ -200,6 +202,8 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                                                         />
                                                         <input
                                                             type="email"
+                                                            id="email"
+                                                            name="email"
                                                             value={email}
                                                             onChange={(e) => setEmail(e.target.value)}
                                                             placeholder={t('modal.form.email')}
@@ -208,6 +212,8 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                                                             className={`w-full bg-[#050510]/50 border border-[#1A1A3A] rounded-[8px] px-4 py-3 text-sm text-white focus:border-[var(--color-accent)]/50 outline-none transition-all placeholder:text-[#333355] ${isRTL ? 'text-right' : 'text-left'} ${status === 'submitting' ? 'opacity-50' : ''}`}
                                                         />
                                                         <textarea
+                                                            id="brief"
+                                                            name="message"
                                                             value={brief}
                                                             onChange={(e) => setBrief(e.target.value)}
                                                             placeholder={t('modal.form.brief')}
